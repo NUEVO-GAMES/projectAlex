@@ -39,9 +39,11 @@ public class enemyScript : MonoBehaviour
         if (transform.position.x >= platform.transform.position.x + platformLength / 2)
         {
             speed = speed * -1;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (transform.position.x <= platform.transform.position.x - platformLength / 2 && speed < 0f ) {
             speed = speed * -1;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         // the two if statements make the enemy move back anf front on the platform
     }
