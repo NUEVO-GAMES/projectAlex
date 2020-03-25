@@ -8,15 +8,14 @@ public class GameOver : MonoBehaviour
 
     public GameObject GameOverPanel;
     // this is a variable that will hold the panel that displays gameOver
-    private void Start()
-    {
-      
-    }
+
     private void Update()
     {
         if (GameObject.Find("life1")== null && GameObject.Find("life2") == null && GameObject.Find("life3")== null) {
             Time.timeScale = 0;
+            // if the player has no lives pause the game
             GameOverPanel.SetActive(true);
+            // display a gameover tab
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

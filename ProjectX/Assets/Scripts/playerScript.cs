@@ -29,6 +29,7 @@ public class playerScript : MonoBehaviour
             if (GameObject.Find("life2") == null) {
                 Health = 0;
             }
+            // this checks if the alex that is being  controlled is a respawn or not
             
         }
 
@@ -39,6 +40,7 @@ public class playerScript : MonoBehaviour
         UIstats[0] = GameObject.Find("life1");
         UIstats[1] = GameObject.Find("life2");
         UIstats[2] = GameObject.Find("life3");
+        // check the game for lives of the character
         if (Health == 2)
         {
             whichLife = 0;
@@ -50,7 +52,7 @@ public class playerScript : MonoBehaviour
         if (Health == 0) {
             whichLife = 2;
         }
-       
+       // we made conditions so that the health can indirectly affect the displayed health bar
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -66,6 +68,7 @@ public class playerScript : MonoBehaviour
         if (collision.name == "GameOverChecker") {
             
             Destroy(UIstats[whichLife]);
+            // if the player dies destroy one of its health bars
             
         }
     }
