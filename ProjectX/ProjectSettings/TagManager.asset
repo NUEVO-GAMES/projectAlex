@@ -6,6 +6,7 @@ TagManager:
   tags:
   - characterChanger
   - platform
+  - enemy
   layers:
   - Default
   - TransparentFX
