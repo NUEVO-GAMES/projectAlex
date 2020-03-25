@@ -1,12 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
-
-       
     /* REFERENCE blackthornprod 2D double/ tripple jump video
       UNITY scriptin API */
     /*we want to make the player moveable so we can see it move in game*/
@@ -43,9 +40,6 @@ public class playerController : MonoBehaviour
         // here we have saved the players sprite renderer in the variable of type sprite renderer
         rb = GetComponent<Rigidbody2D>();
         // we have set the variable rb to the rigid body of the character
-
-        //setting the custom scoreup variable to match the class Score
-      
     }
     void Update()
     {
@@ -86,10 +80,4 @@ public class playerController : MonoBehaviour
         }
     }
     // we have declared a function that will make the character jump by checking if the space bar key is being pressed
-
-        
-        
-          
-        
-    
 }
