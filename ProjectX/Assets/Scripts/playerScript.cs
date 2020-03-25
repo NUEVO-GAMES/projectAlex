@@ -30,6 +30,7 @@ public class playerScript : MonoBehaviour
                 Health = 0;
             }
             // this checks if the alex that is being  controlled is a respawn or not
+            // and assigns the appropriate health
             
         }
 
