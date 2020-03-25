@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
+
+   //making a variable "scoreup" of type "Score" in order to reference to the "Score" script later
+    public Score scoreup;
+    
     /* REFERENCE blackthornprod 2D double/ tripple jump video
       UNITY scriptin API */
     /*we want to make the player moveable so we can see it move in game*/
@@ -40,6 +45,9 @@ public class playerController : MonoBehaviour
         // here we have saved the players sprite renderer in the variable of type sprite renderer
         rb = GetComponent<Rigidbody2D>();
         // we have set the variable rb to the rigid body of the character
+
+        //setting the custom scoreup variable to match the class Score
+      scoreup=FindObjectOfType<Score>();
     }
     void Update()
     {
@@ -80,4 +88,22 @@ public class playerController : MonoBehaviour
         }
     }
     // we have declared a function that will make the character jump by checking if the space bar key is being pressed
+
+//here we make a reference to the "score" script attached to the platform and call the "scorevalue" variable and then increment it by 1 whenever the player comes in contact with the platform 
+     private void OnCollisionEnter2D(Collision2D other) {
+         
+     if(other.collider.tag == "platform"){
+        scoreup.scorevalue++;
+         
+        
+      
+       
+        }
+     
+     } 
+        
+        
+          
+        
+    
 }
