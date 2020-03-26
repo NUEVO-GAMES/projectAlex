@@ -25,7 +25,7 @@ public class Score : MonoBehaviour
     //this line is to change the value of the playerprefs variable eg.Playerprefs.Set[variabletype](1st parameter is the name of the playerprefs variable, 2nd parameter is the modified value)
        { PlayerPrefs.SetFloat("Hiscore", scorevalue);
         //setting the hiscore text to match the value of hiscore value as a string
-            hiscore.text = "BEST:" + scorevalue;
+            hiscore.text = "BEST:" +   scorevalue;
        }
     }
 

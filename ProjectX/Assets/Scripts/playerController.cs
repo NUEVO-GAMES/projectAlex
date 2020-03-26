@@ -92,7 +92,7 @@ public class playerController : MonoBehaviour
 //here we make a reference to the "score" script attached to the platform and call the "scorevalue" variable and then increment it by 1 whenever the player comes in contact with the platform 
      private void OnCollisionEnter2D(Collision2D other) {
          
-     if(other.collider.tag == "platform"){
+     if(other.collider.tag == "platform" && other.gameObject.GetComponent<platformScript>().steppedOn == false){
         scoreup.scorevalue++;
          
         

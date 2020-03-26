@@ -43,8 +43,8 @@ GameObject:
   - component: {fileID: 8994250361870893230}
   - component: {fileID: 8994250361870893225}
   - component: {fileID: 8994250361870893224}
-  - component: {fileID: 8994250361870893203}
   - component: {fileID: 8994250361870893202}
+  - component: {fileID: -7111172228565851377}
   m_Layer: 0
   m_Name: Alex
   m_TagString: Player
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e5f413121ec334c9cab65654cd8ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreup: {fileID: 0}
   speed: 2
   isGrounded: 0
   checkRadius: 0.1
@@ -184,26 +185,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.83, y: 3.7248445}
   m_EdgeRadius: 0
---- !u!114 &8994250361870893203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994250361870893227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88f5a67c14662c49bd0230d7bd37667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 3
-  UIstats:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  damage: 0
-  whichLife: 0
-  iamARespawn: 1
 --- !u!61 &8994250361870893202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -230,3 +211,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.83, y: 5.14}
   m_EdgeRadius: 0
+--- !u!114 &-7111172228565851377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994250361870893227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9633e81907af6f4dac9ae091d3241bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  UIhealth:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isRespawn: 1
+  whichLife: 0
