@@ -27,7 +27,11 @@ public class Deleter : MonoBehaviour
 
             // then destroy the player
         }
-        else {
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("enemy") || collision.CompareTag("platform"))
+        {
             Destroy(collision.gameObject);
         }
     }

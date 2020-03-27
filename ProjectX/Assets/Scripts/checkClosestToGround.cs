@@ -23,5 +23,9 @@ public class checkClosestToGround : MonoBehaviour
             Deleter.GetComponent<Deleter>().goneThrough = false;
             player.transform.position = new Vector2(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y + 0.6f);
         }
+        // these are control statements the check if the player has gonethrough the gameOverchecker and if the collision this.gameobject 
+        // is experiencing is with a platform 
+        // if yes then set  the boolean backto false because we want this action to loop 
+        // and repostion the player to the closset pltform to the ground
     }
 }
