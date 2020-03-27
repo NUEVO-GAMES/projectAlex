@@ -15,17 +15,17 @@ public class playerHealth : MonoBehaviour
     private void Update()
     {
         player = GameObject.FindWithTag("Player");
-        if (Health == 0) {
+        if (Health == -3) {
 
             player.GetComponent<playerScript>().UIhealth[2].GetComponent<Image>().enabled = false;
-            StartCoroutine("endScreenWait");
-            
+            healthPanel.SetActive(true);
+            Time.timeScale = 0;
+
 
         }
     }
-    IEnumerator endScreenWait() {
-        yield return new WaitForSeconds(0f);
-        healthPanel.SetActive(true);
-        Time.timeScale = 0;
-    }
+   
+
+    
+
 }

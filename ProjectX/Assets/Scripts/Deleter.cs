@@ -8,6 +8,8 @@ public class Deleter : MonoBehaviour
     // this the the game character
     private GameObject playerStats;
     // this gameobject takes care of the player stats such as the players health
+    public bool goneThrough = false;
+    // this is a boolean that checks if the player has gone through the deleter collider
     void Update()
     {
         player = GameObject.FindWithTag("Player");
@@ -19,7 +21,7 @@ public class Deleter : MonoBehaviour
         var whichLife = player.GetComponent<playerScript>().whichLife;
         if (collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            goneThrough = true;
             playerStats.GetComponent<playerHealth>().Health--;
             playerStats.GetComponent<playerScript>().UIhealth[whichLife].GetComponent<Image>().enabled = false;
 
