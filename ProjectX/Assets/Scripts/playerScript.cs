@@ -48,8 +48,9 @@ public class playerScript : MonoBehaviour
             // if the player collides with a health power up
             Destroy(collision.gameObject);
             // destroy the health powerup 
-            playerStats.GetComponent<playerHealth>().Health+= 1;
-            //increase the health of the player by one
+            if (playerStats.GetComponent<playerHealth>().Health < 3)
+            { playerStats.GetComponent<playerHealth>().Health += 1; }
+            //increase the health of the player by one if the health of the player is less than 3 which is the max health
             UIhealth[whichLife].GetComponent<Image>().enabled = true;
 
         }

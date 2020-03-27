@@ -21,7 +21,7 @@ public class checkClosestToGround : MonoBehaviour
         
         if (Deleter.GetComponent<Deleter>().goneThrough == true && collision.CompareTag("platform")) {
             Deleter.GetComponent<Deleter>().goneThrough = false;
-            player.transform.position = new Vector2(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y + 3);
+            player.transform.position = new Vector2(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y + 0.6f);
         }
     }
 }
