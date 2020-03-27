@@ -421,7 +421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e857840403cd5af4f9c87ccb1af8ab9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 7361011777973053163, guid: 30dadb569aed6ac4bbbfda95f876d6ab,
+    type: 3}
   speed: -1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 4
+  Right: 1
+  rot: 0
 --- !u!212 &534270922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -670,7 +678,7 @@ GameObject:
   - component: {fileID: 782790370}
   - component: {fileID: 782790369}
   - component: {fileID: 782790368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: new alex
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1069,7 +1077,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e857840403cd5af4f9c87ccb1af8ab9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 7361011777973053163, guid: 30dadb569aed6ac4bbbfda95f876d6ab,
+    type: 3}
   speed: -1.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 4
+  Right: 0
+  rot: 0
 --- !u!212 &953406753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1120,20 +1136,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &953406754
-Transform:
+--- !u!224 &953406754
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953406750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.215466, y: 3.0864563, z: 6.8007812}
+  m_LocalPosition: {x: 0, y: 0, z: 6.8007812}
   m_LocalScale: {x: 0.34454066, y: 0.34028706, z: 0.34028706}
   m_Children: []
   m_Father: {fileID: 1697980068}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -11.215466, y: 3.0864563}
+  m_SizeDelta: {x: 5.12, y: 3.1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &953406755
 Rigidbody2D:
   serializedVersion: 4
@@ -2616,7 +2637,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e857840403cd5af4f9c87ccb1af8ab9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 7361011777973053163, guid: 30dadb569aed6ac4bbbfda95f876d6ab,
+    type: 3}
   speed: 1.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  distance: 4
+  Right: 1
+  rot: 0
 --- !u!212 &1710697388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3041,7 +3070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2106204383}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: groundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
