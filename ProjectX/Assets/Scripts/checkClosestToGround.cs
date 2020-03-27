@@ -11,6 +11,7 @@ public class checkClosestToGround : MonoBehaviour
     // this is going to store the distance between the platform and the refernce ground
     private GameObject Deleter;
     // this is a variable that will hold the deleter gameObject
+    
     private void Start()
     {
         Deleter = GameObject.Find("GameOverChecker");

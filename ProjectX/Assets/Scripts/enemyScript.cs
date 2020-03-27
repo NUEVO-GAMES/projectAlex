@@ -27,12 +27,14 @@ public class enemyScript : MonoBehaviour
     public bool Right;
     // to distinguish between the rights and left of the enemys 
     [SerializeField] float rot;
+    public bool check ;
     private void Start()
     {
-     
+        
     }
     void Update()
     {
+        check = ray.collider;
         if (GetComponent<SpriteRenderer>().flipX == true)
         {
             bulletPath = Vector2.right;
@@ -83,7 +85,7 @@ public class enemyScript : MonoBehaviour
 
     void attackMode() 
     {
-        if (GameObject.FindWithTag("attack")== null) { Instantiate(projectile, transform.position, new Quaternion(0, rot, 0, 0)); }
+        if (GameObject.FindWithTag("attack")== null) {Instantiate(projectile, transform.position, new Quaternion(0, rot, 0, 0)); }
         // this will instantiate the attack of the enemy
     }
 
