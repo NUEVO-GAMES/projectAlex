@@ -77,7 +77,7 @@ public class playerScript : MonoBehaviour
         if(collision.tag=="sheildPU"){
             Deleter.issheild=true;
              Destroy(collision.gameObject);
-            Invoke("sheildoff",10f);
+            if(Deleter.issheild=true){Invoke("sheildoff",5f);}
         }
     }
 

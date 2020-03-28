@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class sheild_script : MonoBehaviour
 {
-    SpriteRenderer sheildsprite;
-    CircleCollider2D sheildcol;
+    public SpriteRenderer sheildsprite;
+   public CircleCollider2D sheildcol;
     Deleter Deleter;
     // Start is called before the first frame update
     void Start()
