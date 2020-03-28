@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6459264852213987091}
   - component: {fileID: 77823208847851905}
   - component: {fileID: 618121102141699632}
+  - component: {fileID: 5887065060208098887}
   m_Layer: 0
   m_Name: shield
-  m_TagString: Untagged
+  m_TagString: sheildPU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +47,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102,3 +104,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5887065060208098887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243224705814905121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd23e84363b9b674eb38f318c054b4fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 25

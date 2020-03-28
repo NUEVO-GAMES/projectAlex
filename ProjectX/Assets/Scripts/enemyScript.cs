@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class enemyScript : MonoBehaviour
 {
+
+
+    Deleter Deleter;
     // we want the enemy to patrol on the platform which its on
     private float platformLength;
     // this is the total length of the platform in which the enemy is on 
@@ -16,7 +19,7 @@ public class enemyScript : MonoBehaviour
   
     private void Start()
     {
-     
+     Deleter=FindObjectOfType<Deleter>();
     }
     void Update()
     {
@@ -32,6 +35,11 @@ public class enemyScript : MonoBehaviour
             platformLength = platform.GetComponent<SpriteRenderer>().bounds.size.x;
             // we have defined the float platformLenth to the length of the platform the enemy is on
         }
+
+         if(collision.tag=="shield"){
+            Deleter.issheild=false;
+           
+            }
     }
     void patrol() {
         transform.position +=  (Vector3)new Vector2(speed, 0f) * Time.deltaTime;
@@ -47,6 +55,6 @@ public class enemyScript : MonoBehaviour
         }
         // the two if statements make the enemy move back anf front on the platform
     }
-  
+    
 
 }

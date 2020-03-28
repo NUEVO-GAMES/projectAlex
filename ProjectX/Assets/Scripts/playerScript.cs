@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class playerScript : MonoBehaviour
 {
+    Deleter Deleter;
+
+   
   
     public GameObject[] UIhealth;
     // this is the graphical representation of the characters health
@@ -17,7 +20,7 @@ public class playerScript : MonoBehaviour
     {
         playerStats = GameObject.Find("playerStats");
         // we have assigned the variable player stats to the empty gameobject we talked about above
- 
+        Deleter=FindObjectOfType<Deleter>();
     }
 
     // Update is called once per frame
@@ -61,10 +64,22 @@ public class playerScript : MonoBehaviour
             // this enables the image script of the UI element 
 
         }
-        if (collision.CompareTag("enemy")) {
+        if (collision.CompareTag("enemy")&& Deleter.issheild==false) {
             playerStats.GetComponent<playerHealth>().Health--;
         }
         // the checks if what is colliding with the player has a tag called enemy
         // if so then it damages the player
+        
+        if (collision.CompareTag("enemy")&& Deleter.issheild==true) {
+             Destroy(collision.gameObject);
+        }
+
+        if(collision.tag=="sheildPU"){
+            Deleter.issheild=true;
+             Destroy(collision.gameObject);
+            Invoke("sheildoff",10f);
+        }
     }
+
+    public void sheildoff(){Deleter.issheild=false;}
 }
